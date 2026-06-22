@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: velocity-verse-backend
+    env: node
+    region: singapore  # closest to India
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
